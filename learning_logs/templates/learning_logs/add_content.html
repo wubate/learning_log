@@ -1,0 +1,16 @@
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+  <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
+  <p>添加一个主题的内容：</p>
+  
+  <form action="{% url 'learning_logs:add_content' topic.id %}" method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="sumit">提交</button>
+  </form>
+
+{% endblock content %}
+
+

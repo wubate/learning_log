@@ -1,0 +1,13 @@
+
+{% extends "learning_logs/base.html" %}
+
+{% block header %}
+  <div class="jumbotron">
+    <h1>记录您的事项！</h1>
+  </div>
+{% endblock header %}
+
+{% block content %}
+  <h2><a href="{% url 'users:register' %}">注册一个账号</a>&nbsp;&nbsp;开启您的网络记事本。</h2>
+  <h2>这里随时在线记录您的事项，随时阅读和查看。</h2>
+{% endblock content %}
